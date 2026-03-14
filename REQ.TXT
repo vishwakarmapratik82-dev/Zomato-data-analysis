@@ -1,0 +1,133 @@
+# 🍽️ Zomato Restaurant Data — Analysis Project
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Zomato](https://img.shields.io/badge/Zomato-E23744?style=for-the-badge&logo=zomato&logoColor=white)
+
+A data analysis project exploring Zomato restaurant data to uncover insights about ratings, pricing, online ordering trends, dining types, and customer votes.
+
+---
+
+## 📁 Dataset Overview
+
+**File:** `Zomato_data_.csv`  
+**Rows:** ~148 restaurants  
+**Columns:** 7
+
+| Column | Description |
+|--------|-------------|
+| `name` | Name of the restaurant |
+| `online_order` | Whether the restaurant accepts online orders (`Yes` / `No`) |
+| `book_table` | Whether table booking is available (`Yes` / `No`) |
+| `rate` | Customer rating out of 5 (e.g., `4.1/5`) |
+| `votes` | Total number of customer votes |
+| `approx_cost(for two people)` | Approximate dining cost for two people (in ₹) |
+| `listed_in(type)` | Restaurant category (`Buffet`, `Cafes`, `Dining`, `other`) |
+
+---
+
+## 🔍 Project Objectives
+
+- Clean and preprocess the raw Zomato dataset
+- Analyze restaurant ratings and vote distributions
+- Compare online ordering vs. non-ordering restaurants
+- Explore the impact of table booking on ratings
+- Identify the most affordable and premium dining options
+- Visualize trends across restaurant types and cost ranges
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python 3.x**
+- **Pandas** — Data manipulation and cleaning
+- **NumPy** — Numerical computations
+- **Matplotlib** — Plotting and visualization
+- **Seaborn** — Statistical charts and heatmaps
+- **Jupyter Notebook** — Interactive analysis environment
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/zomato-data-analysis.git
+cd zomato-data-analysis
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open `zomato_analysis.ipynb` in your browser to explore the analysis.
+
+---
+
+## 📊 Sample Analyses
+
+- **Rating Distribution** — Histogram of restaurant ratings across the dataset
+- **Online Order Impact** — Do restaurants with online ordering get higher votes?
+- **Table Booking vs. Rating** — Does table booking correlate with better ratings?
+- **Cost Analysis** — Distribution of approximate cost for two people
+- **Top Rated Restaurants** — Restaurants with the highest average ratings
+- **Restaurant Type Breakdown** — Count of Buffet, Cafes, Dining, and other types
+- **Votes vs. Rating** — Scatter plot to find correlation between popularity and quality
+
+---
+
+## 📂 Project Structure
+
+```
+zomato-data-analysis/
+│
+├── Zomato_data_.csv            # Raw dataset
+├── zomato_analysis.ipynb       # Main Jupyter analysis notebook
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
+```
+
+---
+
+## 📌 Key Insights (Preview)
+
+- **~60%** of restaurants in the dataset do **not** accept online orders.
+- **Dining** is the most common restaurant type, making up the majority of listings.
+- Restaurants with **table booking** tend to have slightly higher ratings on average.
+- Cost for two ranges from **₹100 to ₹950**, indicating a wide variety of dining options.
+- High vote counts don't always guarantee the highest ratings — some hidden gems exist.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgements
+
+- Dataset inspired by [Zomato](https://www.zomato.com/) restaurant listings
+- Analysis built for educational and portfolio purposes
