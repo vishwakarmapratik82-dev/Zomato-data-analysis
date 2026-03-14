@@ -1,133 +1,93 @@
-# 🍽️ Zomato Restaurant Data — Analysis Project
+# Zomato Data Analysis
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Zomato](https://img.shields.io/badge/Zomato-E23744?style=for-the-badge&logo=zomato&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![EDA](https://img.shields.io/badge/EDA-Exploratory%20Analysis-green) ![Visualization](https://img.shields.io/badge/Visualization-Seaborn%20%7C%20Matplotlib-orange)
 
-A data analysis project exploring Zomato restaurant data to uncover insights about ratings, pricing, online ordering trends, dining types, and customer votes.
+Exploratory data analysis on 148 Zomato restaurant records — uncovering trends in restaurant types, customer votes, ratings, pricing, and online ordering behavior.
 
 ---
 
-## 📁 Dataset Overview
+## Dataset
 
-**File:** `Zomato_data_.csv`  
-**Rows:** ~148 restaurants  
-**Columns:** 7
+- **148 restaurants** · 7 features · No missing values
 
 | Column | Description |
 |--------|-------------|
-| `name` | Name of the restaurant |
-| `online_order` | Whether the restaurant accepts online orders (`Yes` / `No`) |
-| `book_table` | Whether table booking is available (`Yes` / `No`) |
-| `rate` | Customer rating out of 5 (e.g., `4.1/5`) |
-| `votes` | Total number of customer votes |
-| `approx_cost(for two people)` | Approximate dining cost for two people (in ₹) |
-| `listed_in(type)` | Restaurant category (`Buffet`, `Cafes`, `Dining`, `other`) |
+| `name` | Restaurant name |
+| `online_order` | Accepts online orders (Yes/No) |
+| `book_table` | Table booking available (Yes/No) |
+| `rate` | Rating out of 5 (parsed from "X/5" format) |
+| `votes` | Total customer votes |
+| `approx_cost(for two people)` | Approximate cost in INR |
+| `listed_in(type)` | Category: Buffet / Cafes / Dining / Other |
 
 ---
 
-## 🔍 Project Objectives
+## Key Findings
 
-- Clean and preprocess the raw Zomato dataset
-- Analyze restaurant ratings and vote distributions
-- Compare online ordering vs. non-ordering restaurants
-- Explore the impact of table booking on ratings
-- Identify the most affordable and premium dining options
-- Visualize trends across restaurant types and cost ranges
-
----
-
-## 🛠️ Tech Stack
-
-- **Python 3.x**
-- **Pandas** — Data manipulation and cleaning
-- **NumPy** — Numerical computations
-- **Matplotlib** — Plotting and visualization
-- **Seaborn** — Statistical charts and heatmaps
-- **Jupyter Notebook** — Interactive analysis environment
+- **Dining** is the most common restaurant type and receives the most votes
+- Most restaurants are rated between **3.5 and 4.0**
+- Couples most commonly prefer restaurants with an approximate cost of **₹300**
+- **Online orders** receive higher ratings compared to offline orders
+- The heatmap shows **77 dining restaurants** accept online orders vs 33 that do not
 
 ---
 
-## 🚀 Getting Started
+## Analysis Performed
 
-### 1. Clone the Repository
+| Analysis | Method |
+|----------|--------|
+| Type distribution | Count plot of restaurant categories |
+| Votes by type | Line chart of total votes per category |
+| Rating distribution | Histogram with 4 bins |
+| Couple spending habits | Count plot of approx cost |
+| Online vs Offline rating | Boxplot comparison |
+| Order mode heatmap | Pivot table heatmap (restaurant type × online order) |
+
+---
+
+## Setup & Usage
+
+### 1. Clone / download the project
 
 ```bash
-git clone https://github.com/your-username/zomato-data-analysis.git
+git clone <your-repo-url>
 cd zomato-data-analysis
 ```
 
-### 2. Install Dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Launch Jupyter Notebook
+### 3. Add the dataset
 
-```bash
-jupyter notebook
+Place `Zomato data .csv` in `/content/` (or update the path in the notebook).
+
+### 4. Run the notebook
+
+Open in **Google Colab** or **Jupyter Notebook** and run all cells.
+
+---
+
+## Dependencies
+
+```
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.8.4
+seaborn==0.13.2
 ```
 
-Open `zomato_analysis.ipynb` in your browser to explore the analysis.
-
 ---
 
-## 📊 Sample Analyses
-
-- **Rating Distribution** — Histogram of restaurant ratings across the dataset
-- **Online Order Impact** — Do restaurants with online ordering get higher votes?
-- **Table Booking vs. Rating** — Does table booking correlate with better ratings?
-- **Cost Analysis** — Distribution of approximate cost for two people
-- **Top Rated Restaurants** — Restaurants with the highest average ratings
-- **Restaurant Type Breakdown** — Count of Buffet, Cafes, Dining, and other types
-- **Votes vs. Rating** — Scatter plot to find correlation between popularity and quality
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```
 zomato-data-analysis/
 │
-├── Zomato_data_.csv            # Raw dataset
-├── zomato_analysis.ipynb       # Main Jupyter analysis notebook
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project documentation
+├── Zomato_Data_Analysis_Project.ipynb   # Main analysis notebook
+├── Zomato data .csv                     # Dataset
+├── requirements.txt                     # Python dependencies
+└── README.md                            # Project documentation
 ```
-
----
-
-## 📌 Key Insights (Preview)
-
-- **~60%** of restaurants in the dataset do **not** accept online orders.
-- **Dining** is the most common restaurant type, making up the majority of listings.
-- Restaurants with **table booking** tend to have slightly higher ratings on average.
-- Cost for two ranges from **₹100 to ₹950**, indicating a wide variety of dining options.
-- High vote counts don't always guarantee the highest ratings — some hidden gems exist.
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 🙏 Acknowledgements
-
-- Dataset inspired by [Zomato](https://www.zomato.com/) restaurant listings
-- Analysis built for educational and portfolio purposes
